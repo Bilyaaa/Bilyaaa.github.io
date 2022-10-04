@@ -1,8 +1,46 @@
 
-    .nav-menu-a:hover {
-        color: bisque !important;
-        border-bottom: 1px solid bisque;
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.nav-small {
+    display: none;
+}
+
+.nav-small-opened {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    right: 0;
+    top: 70px;
+    font-weight: 600;
+    div {
+        margin-bottom: 5px;
+        background-color: white;
     }
+
+}
+
+.nav-menu-a:hover {
+    color: bisque !important;
+    border-bottom: 1px solid bisque;
+}
+
+
+@media (max-width: 500px) {
+    .nav-small {
+        margin-top: -10px;
+        display: flex;
+        flex-direction: column;
+        font-size: 3rem;
+        div {
+        line-height: 8px;
+        }
+    }   
+    
+}
+
 
     
 
