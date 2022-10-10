@@ -23,7 +23,7 @@ function Burger() {
       <div>-</div>
     </div>
     <div className="nav-small-opened hidden">
-        <Link><div>SHOP</div></Link>
+    <Link to={SHOP_ROUTE}><div>SHOP</div></Link>
         <div>DELIVERY</div>
         <a href={ADMIN_ROUTE}><div>ADMIN</div></a>
     </div>
