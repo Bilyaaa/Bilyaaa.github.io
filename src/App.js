@@ -105,10 +105,10 @@ function App() {
   
   return (
     <Context.Provider value={{filteredItems, setFilteredItems, items}}>
-    <BrowserRouter>
-      <Header />
-      <AppRouter items={items}/>
-    </BrowserRouter>
+      <BrowserRouter>
+
+        <AppRouter items={items}/>
+      </BrowserRouter>
     </Context.Provider>
   
   );

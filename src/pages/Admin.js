@@ -3,6 +3,7 @@ import { Button, Container, Table } from 'react-bootstrap';
 import '../styles/Admin.scss'
 import { Context } from '../App'
 import { useContext } from 'react';
+import Header from '../components/Header';
 
 
 
@@ -53,6 +54,8 @@ function Admin() {
 
 
     return (
+      <>
+      <Header/>
         <div>
             <div className="auth-inputs__container">
                 <input className="login-input" type='text' placeholder="login" onClick={removeAlert} onKeyUp={getLogin}></input>
@@ -86,6 +89,7 @@ function Admin() {
         </Table>
       </Container>        
         </div>
+        </>
     );
 };
 

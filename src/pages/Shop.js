@@ -1,3 +1,4 @@
+
 import { Container, Row, Col } from "react-bootstrap";
 import { useContext } from "react";
 import { ItemLeft, ItemRight } from "../components/Item";
@@ -5,6 +6,8 @@ import  Filters from '../components/Filters'
 import '../styles/Shop.scss'
 import React from "react";
 import { Context } from '../App'
+import Header from "../components/Header";
+import $ from 'jquery'
 
 
 
@@ -14,12 +17,18 @@ function Shop() {
   const {items} = useContext(Context);
   const{filteredItems, setFilteredItems} = useContext(Context);
 
+  function showFilters() {
+    $('.remove-hidden').css('display', 'none')
+    $('.filter').removeClass('hidden')
+  }
+
 
   return (
     <Context.Provider value={{filteredItems, setFilteredItems}}>
+      <Header/>
     <Container className="mainContainer">
       <div className="filterContainer">
-        <div className="remove-hidden">Filters</div>
+        <div className="remove-hidden" onClick={showFilters}>Filters</div>
         <div className="filter hidden">
           <Filters items={items}></Filters>
         </div>

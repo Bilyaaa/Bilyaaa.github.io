@@ -6,14 +6,17 @@ import Girl from '../images/Girl.jpeg'
 import Wclothing from '../images/Wclothing.jpg'
 import { Link } from 'react-router-dom';
 import { SHOP_ROUTE } from '../utils/consts'
-import $ from 'jquery'
+import Header from '../components/Header';
 
 
-$('burger').hide()
+
+
 function HomeSec1 () {
  
   return (
-    <Container className='home__container'>
+   
+    
+    <Container className='home__container'>  
     <div className='home__container__img_container1'>
       <div className='home__container__img_container1-block1'>
         <div className='home__container__img_container1-block1-text1'>WELCOME</div>
@@ -75,6 +78,7 @@ function HomeSec3 (props) {
 function Home() {
   return (
   <>  
+  <Header/>
  <HomeSec1/>
  <HomeSec2/>
  <HomeSec3 label='WEMEN' src={Wclothing} alt='wclothing'/>

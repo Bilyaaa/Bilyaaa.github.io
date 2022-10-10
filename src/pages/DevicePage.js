@@ -6,6 +6,7 @@ import Swal from 'sweetalert2'
 import ZoomImg from "../components/ZoomImg";
 import $ from 'jquery'
 import '../styles/DevicePage.scss'
+import Header from "../components/Header";
 
 function DevicePage() {
   let storedData = localStorage.getItem("basket");
@@ -34,8 +35,12 @@ function DevicePage() {
       return null
     }
   });
+
+
+
   return myItem.map((i) => (
-   
+    <>
+   <Header/>
     <Container className="mainItemContainer" key={i.id}>
       <ZoomImg i={i}></ZoomImg>
       <div className="arrow">
@@ -128,7 +133,7 @@ function DevicePage() {
        
       </div>
     </Container>
-    
+    </>
    
     
   ));
