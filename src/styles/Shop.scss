@@ -1,7 +1,6 @@
-.mainContainer {
-    box-sizing: border-box;
+.main-container {
+    margin: 8rem auto 0 auto;
     padding: 0;
-    margin-top: 6rem;
     display: flex;
 
     .filterContainer {
@@ -15,7 +14,6 @@
             position: fixed;
             z-index: 90;
             top: 10rem;
-            margin-left: 6rem;
             :first-child{
                 display: flex;
                 flex-direction: column;
@@ -48,10 +46,16 @@
             }
         }
     }
+
+    .content-grid {
+        width: 80%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 @media(max-width: 500px) {
-    .mainContainer {
+    .main-container {
         flex-direction: column;
         .filterContainer {
             width: 100%;
@@ -80,18 +84,15 @@
                 }
             }
         }
-        :last-child {
-            width: 100% !important;
-            margin: 0 auto;
-            .container__card, .container__cardR {
-                background: none;
-                flex-direction: column;
-            }
-        }
+
         .row {
             .text-containerR, .text-container {
                 font-size: 1.5rem;
             }
+        }
+        .content-grid {
+            width: 100%;
+            grid-template-columns: repeat(1, 1fr);
         }
     }
 }
