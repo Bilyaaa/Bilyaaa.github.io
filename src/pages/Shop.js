@@ -19,9 +19,9 @@ function Shop() {
     <Context.Provider value={{filteredItems, setFilteredItems}}>
     <Container className="mainContainer">
       <div className="filterContainer">
-        <div className="filter">
+        <div className="remove-hidden">Filters</div>
+        <div className="filter hidden">
           <Filters items={items}></Filters>
-         
         </div>
       </div>
       <div style={{ width: '80%' }}>
@@ -33,7 +33,7 @@ function Shop() {
                   return (
                     <>
                       <ItemLeft key={item.id} item={item} />
-                      <div className="blackLine"></div>
+
                     </>
                   );
                 }
@@ -44,7 +44,7 @@ function Shop() {
                   return (
                     <>
                       <ItemLeft key={item.id} item={item} />
-                      <div className="blackLine"></div>
+
                     </>
                   );
                 }
@@ -58,7 +58,7 @@ function Shop() {
                   return (
                     <>
                       <ItemRight key={item.id} item={item} />
-                      <div className="blackLineR"></div>
+
                     </>
                   );
                 }
@@ -69,7 +69,7 @@ function Shop() {
                   return (
                     <>
                       <ItemRight key={item.id} item={item} />
-                      <div className="blackLineR"></div>
+
                     </>
                   );
                 }

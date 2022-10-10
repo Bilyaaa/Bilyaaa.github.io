@@ -47,13 +47,25 @@
     }
 }
 
-@media(max-width: 400px) {
+@media(max-width: 500px) {
     .mainContainer {
         flex-direction: column;
         .filterContainer {
+            width: 100%;
+            .remove-hidden {
+                text-align: center;
+                font-weight: 500;
+                text-transform: uppercase;   
+                position: fixed;
+                top: 85px;
+                z-index: 90;
+                width: 100%;
+                background-color: white;
+                padding: 5px;
+            }
             .filter {
                 margin: 0 auto;
-                width: 400px !important;
+                width: 100% !important;
                 top: 80px;
                 margin-left: 0;
                 :first-child {
@@ -70,6 +82,11 @@
             .container__card, .container__cardR {
                 background: none;
                 flex-direction: column;
+            }
+        }
+        .row {
+            .text-containerR, .text-container {
+                font-size: 1.5rem;
             }
         }
     }
