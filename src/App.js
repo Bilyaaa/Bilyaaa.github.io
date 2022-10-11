@@ -1,7 +1,5 @@
 import "bootstrap/dist/css/bootstrap.min.css";
-import Header from './components/Header'
-import { BrowserRouter } from "react-router-dom";
-import AppRouter from "./components/AppRouter";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import React from "react";
 import { useState, useEffect } from "react";
 import './App.css'
@@ -26,6 +24,13 @@ import white3 from "./images/white3.jpg";
 import col1 from "./images/col1.jpg";
 import col2 from "./images/col2.jpg";
 import col3 from "./images/col3.jpg";
+import Header from "./components/Header";
+import Home from "./pages/Home";
+import Shop from "./pages/Shop";
+import Basket from "./pages/Basket";
+import Admin from "./pages/Admin";
+import Delivery from "./pages/Delivery";
+import Item from "./components/Item";
 
 export const Context = React.createContext();
 
@@ -106,11 +111,18 @@ function App() {
   return (
     <Context.Provider value={{filteredItems, setFilteredItems, items}}>
       <BrowserRouter>
-
-        <AppRouter items={items}/>
+      <Routes>
+        <Route path="/" element={<Header />}>
+          <Route index element={<Home />} />
+          <Route path="shop" element={<Shop />} />
+          <Route path="delivery" element={<Delivery />} />
+          <Route path="basket" element={<Basket />} />
+          <Route path="admin" element={<Admin />} />
+          <Route path="deevice" element={<Item />} />
+        </Route>
+      </Routes>
       </BrowserRouter>
     </Context.Provider>
-  
   );
 }
 

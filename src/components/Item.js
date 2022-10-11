@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom'
 import { Card } from 'react-bootstrap'
-import { DEVICE_ROUTE } from '../utils/consts'
 import '../styles/Item.scss'
 
 
@@ -10,7 +9,7 @@ function Item({ item }) {
 
  
   return (
-    <Link to={DEVICE_ROUTE + "/" + item.id} style={{ textDecoration: 'none', color: 'grey' }}>
+    <Link to={"/device/" + item.id} style={{ textDecoration: 'none', color: 'grey' }}>
       <Card key={item.id}>
         <div className='div-type'>{item.type}</div>            
         <div>

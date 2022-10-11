@@ -1,12 +1,10 @@
 import { Container } from "react-bootstrap";
-import Header from "../components/Header";
 import fdehbsd from '../images/fdehbsd.svg'
 import '../styles/Delivery.scss'
 
 function Delivery () {
    return (
     <>
-      <Header/>
        <Container className="main_container">
          
             <div style={{

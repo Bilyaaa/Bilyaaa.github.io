@@ -6,7 +6,6 @@ import  Filters from '../components/Filters'
 import '../styles/Shop.scss'
 import React from "react";
 import { Context } from '../App'
-import Header from "../components/Header";
 import $ from 'jquery'
 
 
@@ -33,7 +32,6 @@ function Shop() {
 
   return (
     <Context.Provider value={{filteredItems, setFilteredItems}}>
-      <Header/>
     <Container className="main-container">
       <div className="filterContainer">
         <div className="remove-hidden" onClick={showFilters}>Filters</div>

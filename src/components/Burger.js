@@ -1,6 +1,6 @@
 import $ from 'jquery'
 import { Link } from 'react-router-dom';
-import { ADMIN_ROUTE, SHOP_ROUTE, DELIVERY_ROUTE } from '../utils/consts';
+
 
 
 
@@ -30,9 +30,9 @@ function Burger() {
       <div>-</div>
     </div>
     <div className="nav-small-opened hidden">
-      <Link to={SHOP_ROUTE} onClick={hideMenu}><div>SHOP</div></Link>
-      <Link to={DELIVERY_ROUTE} onClick={hideMenu}><div>DELIVERY</div></Link>
-      <Link to={ADMIN_ROUTE} onClick={hideMenu}><div>ADMIN</div></Link>
+      <Link to="/shop" onClick={hideMenu}><div>SHOP</div></Link>
+      <Link to="/delivery" onClick={hideMenu}><div>DELIVERY</div></Link>
+      <Link to="/admin" onClick={hideMenu}><div>ADMIN</div></Link>
     </div>
     </>
   );

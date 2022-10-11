@@ -1,18 +1,15 @@
 import { Navbar, Nav, Container } from "react-bootstrap";
 import  Burger  from "../components/Burger";
 import React from "react";
-import {
-  ADMIN_ROUTE,
-  HOME_ROUTE,
-  BASKET_ROUTE,
-  SHOP_ROUTE,
-  DELIVERY_ROUTE,
-} from "../utils/consts";
 import "../styles/Header.scss";
+import { Link, Outlet } from "react-router-dom";
 
 
 function Header() {
+
+
   return (
+    <>
     <Container
       style={{
         zIndex: "100",
@@ -27,41 +24,38 @@ function Header() {
     >
       <Navbar expand="lg">
         <Container>
-          <Navbar.Brand
-            href={HOME_ROUTE}
+          <Link
+            to='/'
             style={{ letterSpacing: ".4em", fontSize: "1.7rem" }}
           >
             NEXT HAND
-          </Navbar.Brand>
+          </Link>
           <Burger />
           <Navbar.Collapse
             id="basic-navbar-nav"
             style={{ justifyContent: "flex-end" }}
           > 
             <Nav className="nav-big">
-              <Nav.Link className="nav-menu-a" href={SHOP_ROUTE}>
+              <Link className="nav-menu-a" to='/shop'>
                 Shop
-              </Nav.Link>
-              <Nav.Link className="nav-menu-a" href={BASKET_ROUTE}>
+              </Link>
+              <Link className="nav-menu-a" to='/basket'>
                 Basket
-              </Nav.Link>
-              <Nav.Link className="nav-menu-a" href={DELIVERY_ROUTE}>
+              </Link>
+              <Link className="nav-menu-a" to='/delivery'>
                 Delivery
-              </Nav.Link>
-              <Nav.Link className="nav-menu-a" href={BASKET_ROUTE}>
-                Contacts
-              </Nav.Link>
-              <Nav.Link className="nav-menu-a" href={BASKET_ROUTE}>
-                About Us
-              </Nav.Link>
-              <Nav.Link className="nav-menu-a" href={ADMIN_ROUTE}>
+              </Link>
+              <Link className="nav-menu-a" to='/admin'>
                 ADMIN
-              </Nav.Link>
+              </Link>
             </Nav>
           </Navbar.Collapse>
         </Container>
       </Navbar>
     </Container>
+
+    <Outlet />
+    </>
   );
 }
 
