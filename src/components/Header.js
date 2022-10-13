@@ -8,7 +8,7 @@ import { Link, Outlet } from "react-router-dom";
 function Header() {
 
   
-function Burger() {
+
  
   function Menu() {
       document.querySelector('.nav-small-opened').classList.remove('hidden')
@@ -21,21 +21,7 @@ function Burger() {
     $('.nav-small').css('display', 'flex')
   }
 
-  return (
-    <>
-    <div className="nav-small" onClick={Menu}>
-      <div>-</div>
-      <div>-</div>
-      <div>-</div>
-    </div>
-    <div className="nav-small-opened hidden">
-      <Link to="/shop" onClick={hideMenu}><div>SHOP</div></Link>
-      <Link to="/delivery" onClick={hideMenu}><div>DELIVERY</div></Link>
-      <Link to="/admin" onClick={hideMenu}><div>ADMIN</div></Link>
-    </div>
-    </>
-  );
-}
+
 
 
   return (
@@ -60,7 +46,16 @@ function Burger() {
           >
             NEXT HAND
           </Link>
-          <Burger />
+          <div className="nav-small" onClick={Menu}>
+            <div>-</div>
+            <div>-</div>
+            <div>-</div>
+          </div>
+          <div className="nav-small-opened hidden">
+            <Link to="/shop" onClick={hideMenu}><div>SHOP</div></Link>
+            <Link to="/delivery" onClick={hideMenu}><div>DELIVERY</div></Link>
+            <Link to="/admin" onClick={hideMenu}><div>ADMIN</div></Link>
+          </div>
           <Navbar.Collapse
             id="basic-navbar-nav"
             style={{ justifyContent: "flex-end" }}
