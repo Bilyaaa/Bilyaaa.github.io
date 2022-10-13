@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.628572bd.css",
-    "main.js": "/static/js/main.a98b3dba.js",
+    "main.js": "/static/js/main.624da9c9.js",
     "static/media/Town.jpg": "/static/media/Town.d1308f08aca97212e5de.jpg",
     "static/media/body2.jpg": "/static/media/body2.9a52816c5110288e9b53.jpg",
     "static/media/body1.jpg": "/static/media/body1.9db53714afde92371010.jpg",
@@ -30,10 +30,10 @@
     "static/media/fdehbsd.svg": "/static/media/fdehbsd.d0cb444eee7bf6f0bc321f760912c522.svg",
     "index.html": "/index.html",
     "main.628572bd.css.map": "/static/css/main.628572bd.css.map",
-    "main.a98b3dba.js.map": "/static/js/main.a98b3dba.js.map"
+    "main.624da9c9.js.map": "/static/js/main.624da9c9.js.map"
   },
   "entrypoints": [
     "static/css/main.628572bd.css",
-    "static/js/main.a98b3dba.js"
+    "static/js/main.624da9c9.js"
   ]
 }
