@@ -51,10 +51,10 @@ function Header() {
             <div>-</div>
           </div>
           <div className="nav-small-opened hidden">
-          <Link to="/" onClick={hideMenu}><div>HOME</div></Link>
-            <Link to="/shop" onClick={hideMenu}><div>SHOP</div></Link>
-            <Link to="/delivery" onClick={hideMenu}><div>DELIVERY</div></Link>
-            <Link to="/admin" onClick={hideMenu}><div>ADMIN</div></Link>
+            <Link to="/" onClick={hideMenu}><div>HOME</div></Link>
+            <Link to="shop" onClick={hideMenu}><div>SHOP</div></Link>
+            <Link to="delivery" onClick={hideMenu}><div>DELIVERY</div></Link>
+            <Link to="admin" onClick={hideMenu}><div>ADMIN</div></Link>
           </div>
           <Navbar.Collapse
             id="basic-navbar-nav"
