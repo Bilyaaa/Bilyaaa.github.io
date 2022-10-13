@@ -37,7 +37,6 @@ function Filters ({items}) {
 
   
   function filteredBrand(value) {
-   
    filteredItems = items.filter((item) => {
       if (item.brand === value || item.type === value) { return item } else return null
     });
@@ -54,20 +53,9 @@ function Filters ({items}) {
 
     return (
         
-        <div style={{ display:'flex',justifyContent:'space-between'}}>
-          <Accordion
-            style={{
-             width:'30%',
-            
-          
-            }}
-          >
-            <Accordion.Item
-              style={{
-                borderRadius: 0,
-              }}
-              eventKey="1"
-            >
+        <div>
+          <Accordion >
+            <Accordion.Item eventKey="1">
               <Accordion.Header onClick={brandSelect}>BRANDS</Accordion.Header>
               <Accordion.Body style={{ padding: "0", zIndex:'95' }}>
                 <ListGroup style={{ borderRadius: 0 }}>
@@ -104,19 +92,8 @@ function Filters ({items}) {
               </Accordion.Body>
             </Accordion.Item>
           </Accordion>
-          <Accordion
-            style={{
-              width:'30%',
-             
-
-            }}
-          >
-            <Accordion.Item
-              eventKey="2"
-              style={{
-                borderRadius: 0,
-              }}
-            >
+          <Accordion>
+            <Accordion.Item eventKey="2">
               <Accordion.Header onClick={typeSelect}>
                 WOMEN CLOTHING
               </Accordion.Header>
@@ -154,14 +131,8 @@ function Filters ({items}) {
               </Accordion.Body>
             </Accordion.Item>
           </Accordion>
-          <Accordion style={{width:'30%', }}>
-            <Accordion.Item
-              style={{
-                borderRadius: 0,
-                
-              }}
-              eventKey="3"
-            >
+          <Accordion>
+            <Accordion.Item eventKey="3">
               <Accordion.Header>KIDS CLOTHING</Accordion.Header>
               <Accordion.Body style={{ padding: "0" }}></Accordion.Body>
             </Accordion.Item>

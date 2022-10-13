@@ -17,17 +17,27 @@ function Shop() {
   const{filteredItems, setFilteredItems} = useContext(Context);
 
   function showFilters() {
+    if ($('.close-button').hasClass('hidden')) {
     $('.remove-hidden').css('display', 'none')
     $('.filter').removeClass('hidden')
+    $('.close-button').removeClass('hidden')
+    }
+    else {
+      $('.filter').addClass('hidden')
+      $('.remove-hidden').css('display', 'block')
+      $('.close-button').addClass('hidden')
+    }
+    
   }
 
-  function widthCheck() {
+  $(document).ready(function widthCheck() {
     if (window.outerWidth < 500) {
       $('.filter').addClass('hidden')
     }
-  }
+  })
+  
 
-  document.addEventListener('resize', widthCheck())
+  
 
 
   return (
@@ -35,6 +45,7 @@ function Shop() {
     <Container className="main-container">
       <div className="filterContainer">
         <div className="remove-hidden" onClick={showFilters}>Filters</div>
+        <div className='close-button hidden' onClick={showFilters}>Close</div>
         <div className="filter">
           <Filters items={items}></Filters>
         </div>
