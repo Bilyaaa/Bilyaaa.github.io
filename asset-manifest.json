@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.b9ecefe7.css",
-    "main.js": "/static/js/main.545edd6a.js",
+    "main.css": "/static/css/main.628572bd.css",
+    "main.js": "/static/js/main.a98b3dba.js",
     "static/media/Town.jpg": "/static/media/Town.d1308f08aca97212e5de.jpg",
     "static/media/body2.jpg": "/static/media/body2.9a52816c5110288e9b53.jpg",
     "static/media/body1.jpg": "/static/media/body1.9db53714afde92371010.jpg",
@@ -27,13 +27,13 @@
     "static/media/Wclothing.jpg": "/static/media/Wclothing.b30b3c19b6edde2c2f03.jpg",
     "static/media/shi1.jpg": "/static/media/shi1.1526c475ede4dcdb0e13.jpg",
     "static/media/city.jpg": "/static/media/city.0bf8ce19b7c16885b5b2.jpg",
-    "static/media/fdehbsd.svg": "/static/media/fdehbsd.c49412dd04fd8be96862ce226824b37b.svg",
+    "static/media/fdehbsd.svg": "/static/media/fdehbsd.d0cb444eee7bf6f0bc321f760912c522.svg",
     "index.html": "/index.html",
-    "main.b9ecefe7.css.map": "/static/css/main.b9ecefe7.css.map",
-    "main.545edd6a.js.map": "/static/js/main.545edd6a.js.map"
+    "main.628572bd.css.map": "/static/css/main.628572bd.css.map",
+    "main.a98b3dba.js.map": "/static/js/main.a98b3dba.js.map"
   },
   "entrypoints": [
-    "static/css/main.b9ecefe7.css",
-    "static/js/main.545edd6a.js"
+    "static/css/main.628572bd.css",
+    "static/js/main.a98b3dba.js"
   ]
 }
