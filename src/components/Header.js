@@ -8,20 +8,24 @@ import { Link, Outlet } from "react-router-dom";
 function Header() {
 
   function Menu() {
-    if ($('.nav-small-opened').hasClass('hidden')) {
-    document.querySelector('.nav-small-opened').classList.remove('hidden')
-    $('.nav-small-opened div').css('opacity', '1')
-    }
-    else document.querySelector('.nav-small-opened').classList.add('hidden')
+    $('.nav-small-opened').removeClass('hidden')
   }
 
   function hideMenu() {
-    $('.nav-small-opened').classList.add('hidden')
-    $('.nav-small').css('display', 'flex')
+    if (window.outerWidth < 500) {
+    $('.nav-small-opened').addClass('hidden')
+  }
   }
 
+  $(document).ready(function widthCheck() {
+    if (window.outerWidth < 500) {
+      $('.filter').addClass('hidden')
+      $('.nav-small-opened').addClass('small')
+      $('.nav-small-opened').addClass('hidden')
+    }
+  })
 
-
+ 
 
   return (
     <>
@@ -45,36 +49,28 @@ function Header() {
           >
             NEXT HAND
           </Link>
-          <div className="nav-small" onClick={Menu}>
-            <div>-</div>
-            <div>-</div>
-            <div>-</div>
-          </div>
-          <div className="nav-small-opened hidden">
-            <Link to="/" onClick={hideMenu}><div>HOME</div></Link>
-            <Link to="shop" onClick={hideMenu}><div>SHOP</div></Link>
-            <Link to="delivery" onClick={hideMenu}><div>DELIVERY</div></Link>
-            <Link to="admin" onClick={hideMenu}><div>ADMIN</div></Link>
-          </div>
-          <Navbar.Collapse
-            id="basic-navbar-nav"
-            style={{ justifyContent: "flex-end" }}
-          > 
             <Nav className="nav-big">
-              <Link className="nav-menu-a" to='/shop'>
+              <div className="nav-small" onClick={Menu}>
+                <div>-</div>
+                <div>-</div>
+                <div>-</div>
+              </div>
+              <div className="nav-small-opened">
+              <Link className="nav-menu-a" onClick={hideMenu} to='/shop'>
                 Shop
               </Link>
-              <Link className="nav-menu-a" to='/basket'>
+              <Link className="nav-menu-a" onClick={hideMenu} to='/basket'>
                 Basket
               </Link>
-              <Link className="nav-menu-a" to='/delivery'>
+              <Link className="nav-menu-a" onClick={hideMenu} to='/delivery'>
                 Delivery
               </Link>
-              <Link className="nav-menu-a" to='/admin'>
+              <Link className="nav-menu-a" onClick={hideMenu} to='/admin'>
                 ADMIN
               </Link>
+              </div>
             </Nav>
-          </Navbar.Collapse>
+          
         </Container>
       </Navbar>
     </Container>
