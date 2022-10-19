@@ -30,7 +30,7 @@ import Shop from "./pages/Shop";
 import Basket from "./pages/Basket";
 import Admin from "./pages/Admin";
 import Delivery from "./pages/Delivery";
-import Item from "./components/Item";
+import DevicePage from "./pages/DevicePage";
 
 export const Context = React.createContext();
 
@@ -118,7 +118,7 @@ function App() {
           <Route path="delivery" element={<Delivery />} />
           <Route path="basket" element={<Basket />} />
           <Route path="admin" element={<Admin />} />
-          <Route path="deevice" element={<Item />} />
+          <Route path="device/:itemId" element={<DevicePage />} />
         </Route>
       </Routes>
       </BrowserRouter>

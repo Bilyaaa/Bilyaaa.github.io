@@ -9,7 +9,7 @@ function Item({ item }) {
 
  
   return (
-    <Link to={"/device/" + item.id} style={{ textDecoration: 'none', color: 'grey' }}>
+    <Link to={"/device/" + item.id} key={item.id} style={{ textDecoration: 'none', color: 'grey' }}>
       <Card key={item.id}>
         <div className='div-type'>{item.type}</div>            
         <div>
