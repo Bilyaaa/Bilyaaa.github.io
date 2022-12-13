@@ -1,4 +1,5 @@
 
+
 a {
     text-decoration: none;
     color: black;
@@ -10,6 +11,10 @@ a {
 .nav-small {
     display: none;
     color: black;
+}
+
+.nav-small-opened .nav-menu-a {
+    margin-right: 1rem;
 }
 
 .small {
